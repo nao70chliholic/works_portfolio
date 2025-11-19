@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>なおなお | 商品開発パートナー・ポートフォリオ</title>
+    <meta name="description" content="現場と経営をつなぐ、商品開発の「実行型」パートナー。なおなおのポートフォリオサイトです。">
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Config for Specific Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#FFD700',      /* Main: Yellow Gold */
+                            goldLight: '#FFF8DC', /* Lighter Gold for backgrounds */
+                            green: '#2E8B57',     /* Accent: Sea Green */
+                            greenHover: '#246d44',
+                            dark: '#333333',      /* Text Main */
+                            gray: '#F9FAFB',      /* Light Gray Background */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        /* Image overlay gradient */
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-dark bg-white antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-brand-dark tracking-wide">
+                        NAONAO<span class="text-brand-gold">.</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#concept" class="text-gray-600 hover:text-brand-gold font-medium transition">Concept</a>
+                    <a href="#strengths" class="text-gray-600 hover:text-brand-gold font-medium transition">Strengths</a>
+                    <a href="#works" class="text-gray-600 hover:text-brand-gold font-medium transition">Works</a>
+                    <a href="#service" class="text-gray-600 hover:text-brand-gold font-medium transition">Service</a>
+                    <a href="#profile" class="text-gray-600 hover:text-brand-gold font-medium transition">Profile</a>
+                    <a href="#contact" class="bg-brand-green text-white px-5 py-2 rounded-full hover:bg-brand-greenHover transition shadow-md font-bold text-sm">
+                        お問い合わせ
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-dark focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#concept" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Concept</a>
+                <a href="#strengths" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Strengths</a>
+                <a href="#works" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Works</a>
+                <a href="#service" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Service</a>
+                <a href="#profile" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Profile</a>
+                <a href="#contact" class="block mt-4 text-center w-full bg-brand-green text-white px-5 py-3 rounded-lg font-bold shadow-sm">お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. First View (FV) -->
+    <section class="relative h-screen min-h-[600px] flex items-center justify-center pt-20">
+        <!-- Background Image with Fallback -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80" 
+                 alt="ミーティング風景" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://placehold.co/1920x1080/e2e2e2/666666?text=Hero+Image'" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-4 text-center text-white fade-in-section">
+            <h2 class="text-xl md:text-2xl font-bold mb-4 tracking-wider text-brand-gold">
+                “できない”を“できる”に変える。
+            </h2>
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-shadow">
+                現場と経営をつなぐ、<br class="md:hidden">商品開発の<br>
+                <span class="border-b-4 border-brand-gold pb-1">「実行型」パートナー。</span>
+            </h1>
+            
+            <div class="bg-white/90 text-gray-800 p-6 md:p-8 rounded-xl max-w-3xl mx-auto shadow-xl backdrop-blur-sm mb-10">
+                <p class="text-sm md:text-base leading-relaxed font-medium">
+                    大手菓子メーカー（元・株式会社東ハト 開発担当）にて<br class="hidden md:block">
+                    <span class="font-bold text-brand-green text-lg">『暴君ハバネロ』『あみじゃが』</span>など<br>
+                    ヒット商品・ロングセラー商品の開発に携わる。<br>
+                    企画から工場選定、量産化まで。あなたの事業を「前」へ進めます。
+                </p>
+            </div>
+
+            <a href="#contact" class="inline-block bg-brand-green hover:bg-brand-greenHover text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform transition hover:-translate-y-1 hover:shadow-xl">
+                まずは無料相談で「現状」をお聞かせください
+                <i class="fas fa-chevron-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. Problems (共感) -->
+    <section id="concept" class="py-20 bg-brand-gray">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-brand-green font-bold tracking-widest uppercase text-sm">Problems</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-gray-800">
+                    こんなお悩み、<br class="md:hidden">企画だけで終わらせていませんか？
+                </h2>
+                <p class="text-gray-600 text-lg">
+                    「作りたい思い」はあるのに、「形にする術」がない<br>経営者・リーダーの皆様へ
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 fade-in-section relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-2 bg-brand-gold"></div>
+                <ul class="space-y-6">
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 bg-red-100 rounded-full p-1 mt-1">
+                            <i class="fas fa-check text-red-500 text-xl w-6 h-6 flex items-center justify-center"></i>
+                        </div>
+                        <p class="ml-4 text-lg font-medium text-gray-700">
+                            新規事業で食品・菓子を作りたいが、<span class="bg-yellow-100 px-1">工場のツテも製造知識もない</span>。
+                        </p>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 bg-red-100 rounded-full p-1 mt-1">
+                            <i class="fas fa-check text-red-500 text-xl w-6 h-6 flex items-center justify-center"></i>
+                        </div>
+                        <p class="ml-4 text-lg font-medium text-gray-700">
+                            社内の開発チームが、技術や製造の壁にぶつかり<span class="bg-yellow-100 px-1 font-bold">「できません」と諦めてしまう</span>。
+                        </p>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 bg-red-100 rounded-full p-1 mt-1">
+                            <i class="fas fa-check text-red-500 text-xl w-6 h-6 flex items-center justify-center"></i>
+                        </div>
+                        <p class="ml-4 text-lg font-medium text-gray-700">
+                            企画、製造、営業の連携が取れず、プロジェクトが空中分解している。
+                        </p>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="flex-shrink-0 bg-red-100 rounded-full p-1 mt-1">
+                            <i class="fas fa-check text-red-500 text-xl w-6 h-6 flex items-center justify-center"></i>
+                        </div>
+                        <p class="ml-4 text-lg font-medium text-gray-700">
+                            若手チームに主体性がなく、指示待ちの状態から抜け出せない。
+                        </p>
+                    </li>
+                </ul>
+                
+                <div class="mt-10 pt-10 border-t border-gray-100 text-center">
+                    <p class="text-xl md:text-2xl font-bold text-brand-dark">
+                        その停滞、<span class="text-brand-green">「技術・マーケ・現場」をつなぐ“翻訳者”</span>がいれば、<br>劇的に動き出します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Strengths (3つの理由) -->
+    <section id="strengths" class="py-24 bg-white relative">
+        <!-- Background Decor -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-brand-goldLight rounded-full blur-3xl opacity-50 -translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="container mx-auto px-4 max-w-6xl relative z-10">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-brand-gold font-bold tracking-widest uppercase text-sm">Why me?</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">
+                    なおなおが選ばれる3つの理由
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <!-- Reason 1 -->
+                <div class="bg-white rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition duration-300 fade-in-section">
+                    <div class="text-6xl font-bold text-brand-gold/20 mb-4 absolute top-4 right-6">01</div>
+                    <div class="w-16 h-16 bg-brand-goldLight text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">
+                        机上の空論ではない。<br>「国民的ヒット」を生み出した<br><span class="text-brand-green">確かな技術力</span>
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        ただのアイデア出しではありません。市場価値を生み出すコンセプト設計や、技術的なハードルを超えて実現させた「実務経験」が武器です。「作れない」を「どうやったら作れるか」に変換します。
+                    </p>
+                </div>
+
+                <!-- Reason 2 -->
+                <div class="bg-white rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition duration-300 fade-in-section" style="transition-delay: 0.1s;">
+                    <div class="text-6xl font-bold text-brand-gold/20 mb-4 absolute top-4 right-6">02</div>
+                    <div class="w-16 h-16 bg-brand-goldLight text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">
+                        工場探しから量産まで。<br>ゼロイチの<span class="text-brand-green">「実装」にとことん強い</span>
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        多くのコンサルが苦手とする「製造現場（リアル）」にこそ強みがあります。委託先工場の探索、タフな交渉、ラインの条件設定まで。経営者の「作りたい」を、現場が「作れる」状態になるまで伴走します。
+                    </p>
+                </div>
+
+                <!-- Reason 3 -->
+                <div class="bg-white rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition duration-300 fade-in-section" style="transition-delay: 0.2s;">
+                    <div class="text-6xl font-bold text-brand-gold/20 mb-4 absolute top-4 right-6">03</div>
+                    <div class="w-16 h-16 bg-brand-goldLight text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">
+                        「一緒にいると魔法がかかる」<br>と言われる<span class="text-brand-green">巻き込み力</span>
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        「なおなおさんに頼むと、チームが急に前に進み出す」。そう評価される理由は、否定せず、自己決定を促す対話力にあります。社外の人間でありながら、まるで中の人のようにチームの熱量を高め、自走する組織へと変えます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Works (実績ストーリー) -->
+    <section id="works" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-brand-green font-bold tracking-widest uppercase text-sm">Works</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">
+                    実績ストーリー
+                </h2>
+            </div>
+
+            <!-- CASE 01 -->
+            <div class="flex flex-col md:flex-row items-center mb-20 fade-in-section">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <img src="images/habanero3.png" 
+                         alt="激辛スナック開発イメージ" 
+                         class="rounded-2xl shadow-xl w-full object-cover h-64 md:h-80"
+                         onerror="this.src='https://placehold.co/600x400/FFD700/FFFFFF?text=Case+Study+01'">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="text-brand-green font-bold text-sm mb-2 tracking-wider">CASE 01：常識外のコンセプトを「ヒット」へ導く</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">『暴君ハバネロ』シリーズ：<br>激辛ブームの火付け役</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        ただ辛いだけではなく、ハバネロ本来のフルーティさや後引きのある旨みを引き出す味のストーリー設計を追求。“辛い＝快感”という新しい価値づけが支持され、発売から約1年で累計3,000万袋を出荷する爆発的ヒットとなりました。
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs text-gray-500">#コンセプト設計</span>
+                        <span class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs text-gray-500">#味作り</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CASE 02 -->
+            <div class="flex flex-col md:flex-row-reverse items-center mb-20 fade-in-section">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pl-12">
+                    <img src="images/amijaga3.png" 
+                         alt="網状ポテトチップス開発イメージ" 
+                         class="rounded-2xl shadow-xl w-full object-cover h-64 md:h-80"
+                         onerror="this.src='https://placehold.co/600x400/2E8B57/FFFFFF?text=Case+Study+02'">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="text-brand-green font-bold text-sm mb-2 tracking-wider">CASE 02：製造の不可能を可能にする</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">『あみじゃが』：<br>10年続くロングセラーの裏側</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        「ポテトチップスはリング状しか成型できない」という業界の常識に対し、製法を要素分解し、別の技術を組み合わせることで「網状」を実現。新カテゴリーを構築し、ロングセラー商品へと育て上げました。
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs text-gray-500">#技術開発</span>
+                        <span class="bg-white border border-gray-200 px-3 py-1 rounded-full text-xs text-gray-500">#製法改革</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CASE 03 -->
+            <div class="flex flex-col md:flex-row items-center fade-in-section">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="工場改善イメージ" 
+                         class="rounded-2xl shadow-xl w-full object-cover h-64 md:h-80"
+                         onerror="this.src='https://placehold.co/600x400/333333/FFFFFF?text=Case+Study+03'">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="text-brand-green font-bold text-sm mb-2 tracking-wider">CASE 03：現場改善による収益化</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">品質バラつき解消でクレーム激減</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        原料起因のトラブルに対し、現場に入り込んで工程条件を最適化。結果、クレームの激減だけでなく生産性も向上。「改善できる人」として現場の信頼を勝ち取り、強いチーム作りにも貢献しました。
+                    </p>
+                    <div class="bg-brand-goldLight p-4 rounded-lg mt-4">
+                        <p class="text-sm font-bold text-brand-dark">
+                            <i class="fas fa-arrow-circle-right text-brand-green mr-2"></i>Current Works
+                        </p>
+                        <p class="text-sm text-gray-600 mt-1">
+                            現在は企業の「社外開発部長」として、スタートアップから中堅メーカーまで、新規事業の立ち上げに伴走。「作れる工場が見つからない」という相談から解決しています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Service / Menu -->
+    <section id="service" class="py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16 fade-in-section">
+                <span class="text-brand-gold font-bold tracking-widest uppercase text-sm">Service Plan</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">
+                    具体的な関わり方
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <!-- Plan A -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-gold transition-all hover:shadow-lg fade-in-section">
+                    <div class="text-center mb-6">
+                        <div class="text-gray-500 text-sm font-bold mb-2">Plan A</div>
+                        <h3 class="text-xl font-bold text-brand-dark">スポット相談<br><span class="text-sm font-normal text-gray-600">（ライト）</span></h3>
+                    </div>
+                    <div class="mb-6">
+                        <span class="block text-center text-sm bg-gray-100 text-gray-600 rounded-full px-3 py-1 mb-4">「まず話したい」方向け</span>
+                        <p class="text-gray-600 text-sm leading-relaxed">現状のモヤモヤを整理し、次の一歩を明確にします。</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-3 mb-6">
+                        <li class="flex"><i class="fas fa-check text-brand-gold mr-2 mt-1"></i>商品開発の壁打ち</li>
+                        <li class="flex"><i class="fas fa-check text-brand-gold mr-2 mt-1"></i>コンセプト相談</li>
+                        <li class="flex"><i class="fas fa-check text-brand-gold mr-2 mt-1"></i>コミュニティ・教育相談</li>
+                    </ul>
+                    <div class="text-center text-sm font-bold text-gray-500 border-t pt-4">時間：60〜90分</div>
+                </div>
+
+                <!-- Plan B -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-brand-green relative shadow-xl transform md:-translate-y-4 fade-in-section" style="transition-delay: 0.1s;">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-green text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider">POPULAR</div>
+                    <div class="text-center mb-6">
+                        <div class="text-brand-green text-sm font-bold mb-2">Plan B</div>
+                        <h3 class="text-xl font-bold text-brand-dark">短期伴走プロジェクト<br><span class="text-sm font-normal text-gray-600">（スタンダード）</span></h3>
+                    </div>
+                    <div class="mb-6">
+                        <span class="block text-center text-sm bg-green-50 text-brand-green rounded-full px-3 py-1 mb-4">「企画を前に進めたい」企業向け</span>
+                        <p class="text-gray-600 text-sm leading-relaxed">コンセプト設計から試作のディレクションまで、プロジェクトの初速を上げます。</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-3 mb-6">
+                        <li class="flex"><i class="fas fa-check text-brand-green mr-2 mt-1"></i>商品アイデア整理</li>
+                        <li class="flex"><i class="fas fa-check text-brand-green mr-2 mt-1"></i>試作ディレクション</li>
+                        <li class="flex"><i class="fas fa-check text-brand-green mr-2 mt-1"></i>小規模チームの育成</li>
+                    </ul>
+                    <div class="text-center text-sm font-bold text-gray-500 border-t pt-4">期間：1〜3ヶ月</div>
+                </div>
+
+                <!-- Plan C -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:border-brand-gold transition-all hover:shadow-lg fade-in-section" style="transition-delay: 0.2s;">
+                    <div class="text-center mb-6">
+                        <div class="text-gray-500 text-sm font-bold mb-2">Plan C</div>
+                        <h3 class="text-xl font-bold text-brand-dark">新規事業・量産化<br>フルサポート<span class="text-sm font-normal text-gray-600">（プレミアム）</span></h3>
+                    </div>
+                    <div class="mb-6">
+                        <span class="block text-center text-sm bg-gray-100 text-gray-600 rounded-full px-3 py-1 mb-4">「本気で形にしたい」企業向け</span>
+                        <p class="text-gray-600 text-sm leading-relaxed">工場の探索から交渉、ライン立ち上げまで。あなたの右腕として完遂させます。</p>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-3 mb-6">
+                        <li class="flex"><i class="fas fa-check text-brand-gold mr-2 mt-1"></i>委託先工場の探索・交渉</li>
+                        <li class="flex"><i class="fas fa-check text-brand-gold mr-2 mt-1"></i>設備・製法のゼロイチ構築</li>
+                        <li class="flex"><i class="fas fa-check text-brand-gold mr-2 mt-1"></i>PJチーム全体の推進</li>
+                    </ul>
+                    <div class="text-center text-sm font-bold text-gray-500 border-t pt-4">期間：6〜12ヶ月</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Profile -->
+    <section id="profile" class="py-24 bg-brand-goldLight/30">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden fade-in-section">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-2/5 bg-gray-100 relative min-h-[300px]">
+                        <img src="images/profile.jpg" 
+                             alt="なおなお プロフィール写真" 
+                             class="absolute inset-0 w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/400x500/FFD700/333333?text=Profile+Image'">
+                    </div>
+                    <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-center">
+                        <span class="text-brand-green font-bold tracking-widest text-xs mb-2">PROFILE</span>
+                        <h3 class="text-2xl font-bold text-brand-dark mb-1">なおなお</h3>
+                        <p class="text-sm text-gray-500 mb-6">商品開発コンサルタント / ヒット商品開発者 / 講演家</p>
+                        
+                        <h4 class="text-xl font-bold mb-4 text-brand-gold">「現場と経営の両輪で、未来をつくる」</h4>
+                        
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            会社員時代、私は開発課長として、経営層の求める「数字」と、現場が抱える「現実」の狭間で戦ってきました。<br>
+                            そこで培ったのは、異なる立場の言葉を翻訳し、全員が納得するゴールへ導く力です。<br><br>
+                            「できない」と諦める前に、一度相談してください。<br>
+                            技術視点、マーケ視点、そしてユーザー視点。すべてを繋いで、あなたの最高の商品を世に出すお手伝いをします。
+                        </p>
+                        
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-brand-gold transition text-2xl"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-brand-gold transition text-2xl"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-brand-gold transition text-2xl"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CTA / Contact -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center fade-in-section">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 text-brand-dark">
+                まずは「無料相談」から
+            </h2>
+            <p class="text-lg text-gray-600 mb-12">
+                あなたの頭の中にあるアイデアを、<br>実現可能なプランに変えましょう。
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="https://forms.gle/MmxW6wF9Ta4LZQg78" class="flex-1 bg-brand-green hover:bg-brand-greenHover text-white font-bold py-5 px-8 rounded-xl shadow-lg transform transition hover:-translate-y-1 flex items-center justify-center text-lg">
+                    <i class="fas fa-envelope mr-3"></i> お問い合わせフォーム
+                </a>
+                <a href="#" class="flex-1 bg-[#06C755] hover:bg-[#05b54d] text-white font-bold py-5 px-8 rounded-xl shadow-lg transform transition hover:-translate-y-1 flex items-center justify-center text-lg">
+                    <i class="fab fa-line mr-3 text-2xl"></i> 公式LINE登録はこちら
+                </a>
+            </div>
+            
+            <div class="mt-8 text-sm text-gray-500">
+                ※ご相談はオンライン（Zoom等）にて承っております。
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-2xl font-bold mb-4 tracking-wide">
+                NAONAO<span class="text-brand-gold">.</span>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8 text-sm">
+                <a href="#concept" class="hover:text-brand-gold transition">Concept</a>
+                <a href="#works" class="hover:text-brand-gold transition">Works</a>
+                <a href="#service" class="hover:text-brand-gold transition">Service</a>
+                <a href="#profile" class="hover:text-brand-gold transition">Profile</a>
+            </div>
+            <p class="text-gray-500 text-xs">
+                &copy; 2024 NAONAO Product Development. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll for Anchor Links (Standard behavior enhancement)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                menu.classList.add('hidden'); // Close mobile menu on click
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in Animation using Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Run once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Header scroll background effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+                header.classList.replace('bg-white/95', 'bg-white');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.replace('bg-white', 'bg-white/95');
+            }
+        });
+    </script>
+</body>
+</html>

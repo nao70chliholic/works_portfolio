@@ -16,12 +16,12 @@
     <meta property="og:description" content="『暴君ハバネロ』『あみじゃが』の開発に携わった、商品開発の「実行型」パートナー。企画から工場選定、量産化まで伴走します。">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:url" content="https://nao70chliholic.github.io/works_portfolio/">
-    <meta property="og:image" content="https://nao70chliholic.github.io/works_portfolio/images/ogp.jpg">
+    <meta property="og:url" content="https://jyngly.com/">
+    <meta property="og:image" content="https://jyngly.com/images/ogp.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="松岡奈央 - 商品開発パートナー">
-    <link rel="canonical" href="https://nao70chliholic.github.io/works_portfolio/">
+    <link rel="canonical" href="https://jyngly.com/">
     
     <!-- Google Fonts: Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,12 +93,12 @@
                 </div>
                 
                 <!-- Desktop Menu -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#concept" class="text-gray-600 hover:text-brand-gold font-medium transition">Concept</a>
-                    <a href="#strengths" class="text-gray-600 hover:text-brand-gold font-medium transition">Strengths</a>
-                    <a href="#works" class="text-gray-600 hover:text-brand-gold font-medium transition">Works</a>
-                    <a href="#service" class="text-gray-600 hover:text-brand-gold font-medium transition">Service</a>
-                    <a href="#profile" class="text-gray-600 hover:text-brand-gold font-medium transition">Profile</a>
+                <nav class="hidden md:flex space-x-6 items-center">
+                    <a href="#when" class="text-gray-600 hover:text-brand-gold font-medium transition text-sm">こんな時に</a>
+                    <a href="#changes" class="text-gray-600 hover:text-brand-gold font-medium transition text-sm">事例</a>
+                    <a href="#strengths" class="text-gray-600 hover:text-brand-gold font-medium transition text-sm">3つの理由</a>
+                    <a href="#current-clients" class="text-gray-600 hover:text-brand-gold font-medium transition text-sm">実績</a>
+                    <a href="#refer" class="text-gray-600 hover:text-brand-gold font-medium transition text-sm">紹介</a>
                     <a href="#contact" class="bg-brand-green text-white px-5 py-2 rounded-full hover:bg-brand-greenHover transition shadow-md font-bold text-sm">
                         お問い合わせ
                     </a>
@@ -116,171 +116,229 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t absolute w-full shadow-lg">
             <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="#concept" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Concept</a>
-                <a href="#strengths" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Strengths</a>
-                <a href="#works" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Works</a>
-                <a href="#service" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Service</a>
-                <a href="#profile" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">Profile</a>
+                <a href="#when" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">こんな時に</a>
+                <a href="#changes" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">事例</a>
+                <a href="#strengths" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">3つの理由</a>
+                <a href="#current-clients" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">実績</a>
+                <a href="#refer" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-gold hover:bg-gray-50 rounded-md">紹介</a>
                 <a href="#contact" class="block mt-4 text-center w-full bg-brand-green text-white px-5 py-3 rounded-lg font-bold shadow-sm">お問い合わせ</a>
             </div>
         </div>
     </header>
 
-    <!-- 1. First View (FV) -->
-    <section class="relative h-screen min-h-[600px] flex items-center justify-center pt-20">
-        <!-- Background Image with Fallback -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80" 
-                 alt="ミーティング風景" 
-                 class="w-full h-full object-cover"
-                 onerror="this.src='https://placehold.co/1920x1080/e2e2e2/666666?text=Hero+Image'" />
-            <div class="absolute inset-0 hero-overlay"></div>
-        </div>
-
-        <div class="relative z-10 container mx-auto px-4 text-center text-white fade-in-section">
-            <h2 class="text-xl md:text-2xl font-bold mb-4 tracking-wider text-brand-gold">
-                “できない”を“できる”に変える。
-            </h2>
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-shadow">
-                現場と経営をつなぐ、<br class="md:hidden">商品開発の<br>
-                <span class="border-b-4 border-brand-gold pb-1">「実行型」パートナー。</span>
+    <!-- 1. First View -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 bg-gradient-to-b from-white via-brand-goldLight/40 to-white">
+        <div class="absolute top-24 right-0 w-96 h-96 bg-brand-gold/20 rounded-full blur-3xl"></div>
+        <div class="relative z-10 container mx-auto px-4 max-w-4xl text-center fade-in-section">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-brand-dark">
+                まだ形になっていないものを、<br class="md:hidden">動く<span class="border-b-4 border-brand-gold pb-1">企画</span>に。
             </h1>
-            
-            <div class="bg-white/90 text-gray-800 p-6 md:p-8 rounded-xl max-w-3xl mx-auto shadow-xl backdrop-blur-sm mb-10">
-                <p class="text-base md:text-lg leading-relaxed font-medium">
-                    大手菓子メーカー（元・株式会社東ハト 開発担当）にて<br class="hidden md:block">
-                    <span class="font-bold text-brand-green text-lg">『暴君ハバネロ』『あみじゃが』&nbsp;など</span><br>
-                    ヒット商品・ロングセラー商品の開発に携わる。<br>
-                    企画から工場選定、量産化まで。あなたの事業を「前」へ進めます。
+            <p class="text-lg md:text-2xl font-bold leading-relaxed text-gray-700 mb-3">
+                やりたいことはある。<br class="md:hidden">でも、何から始めればいいか分からない。<br>
+                そんな時に呼ばれます。
+            </p>
+            <p class="text-base md:text-xl text-gray-600 mb-10">
+                問いを整理し、人をつなぎ、<span class="font-bold text-brand-green">企画から、実物まで。</span>
+            </p>
+
+            <div class="bg-white border border-brand-gold/40 rounded-xl max-w-2xl mx-auto shadow-sm px-6 py-5 mb-10">
+                <p class="text-sm md:text-base leading-relaxed text-gray-700">
+                    食品メーカーで商品開発<span class="font-bold text-brand-dark">20年</span>。<br class="md:hidden">
+                    <span class="font-bold text-brand-dark">『暴君ハバネロ』『あみじゃが』</span>などの立ち上げから、<br class="hidden md:block">
+                    工場での量産化まで。
                 </p>
             </div>
 
             <a href="#contact" class="inline-block bg-brand-green hover:bg-brand-greenHover text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform transition hover:-translate-y-1 hover:shadow-xl">
-                まずは30分、「現状」をお聞かせください
+                まずは話を聞かせてください
                 <i class="fas fa-chevron-right ml-2"></i>
             </a>
         </div>
     </section>
 
-    <!-- 2. Problems (共感) -->
-    <section id="concept" class="py-20 bg-brand-gray">
+
+    <!-- 2. こんな時に呼んでください -->
+    <section id="when" class="py-24 bg-brand-gray">
         <div class="container mx-auto px-4 max-w-5xl">
-            <div class="text-center mb-16 fade-in-section">
-                <span class="text-brand-green font-bold tracking-widest uppercase text-base">Problems</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-gray-800">
-                    こんなお悩み、<br class="md:hidden">企画だけで終わらせていませんか？
-                </h2>
-                <p class="text-gray-600 text-lg">
-                    「作りたい思い」はあるのに、「形にする術」がない<br>経営者・リーダーの皆様へ
+            <div class="text-center mb-14 fade-in-section">
+                <span class="text-brand-green font-bold tracking-widest uppercase text-sm">When to call</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-4 text-gray-800">こんな時に呼んでください</h2>
+                <p class="text-gray-600 text-lg">たとえば、こんな言葉が社内で出ていたら。</p>
+            </div>
+
+            <div class="space-y-4 fade-in-section">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-7 flex flex-col md:flex-row md:items-start gap-3 md:gap-6">
+                    <p class="md:w-2/5 text-lg md:text-xl font-bold text-brand-dark leading-snug shrink-0">
+                        <i class="fas fa-quote-left text-brand-gold/60 mr-2 text-base"></i>会議はやっているのに、何も決まらない
+                    </p>
+                    <p class="md:w-3/5 text-base text-gray-600 leading-relaxed md:border-l md:border-gray-200 md:pl-6">論点を整理し、「次に何を決める会議なのか」から組み直します。</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-7 flex flex-col md:flex-row md:items-start gap-3 md:gap-6">
+                    <p class="md:w-2/5 text-lg md:text-xl font-bold text-brand-dark leading-snug shrink-0">
+                        <i class="fas fa-quote-left text-brand-gold/60 mr-2 text-base"></i>この話、3年前からしている気がする
+                    </p>
+                    <p class="md:w-3/5 text-base text-gray-600 leading-relaxed md:border-l md:border-gray-200 md:pl-6">止まっている理由を分解して、プロジェクトとして動ける単位まで小さくします。</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-7 flex flex-col md:flex-row md:items-start gap-3 md:gap-6">
+                    <p class="md:w-2/5 text-lg md:text-xl font-bold text-brand-dark leading-snug shrink-0">
+                        <i class="fas fa-quote-left text-brand-gold/60 mr-2 text-base"></i>工場や技術に、何を頼めばいいのか分からない
+                    </p>
+                    <p class="md:w-3/5 text-base text-gray-600 leading-relaxed md:border-l md:border-gray-200 md:pl-6">商品企画と製造現場の間に入り、必要な条件を翻訳します。</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-7 flex flex-col md:flex-row md:items-start gap-3 md:gap-6">
+                    <p class="md:w-2/5 text-lg md:text-xl font-bold text-brand-dark leading-snug shrink-0">
+                        <i class="fas fa-quote-left text-brand-gold/60 mr-2 text-base"></i>営業と開発の話が噛み合わない
+                    </p>
+                    <p class="md:w-3/5 text-base text-gray-600 leading-relaxed md:border-l md:border-gray-200 md:pl-6">それぞれが見ているものを整理し、同じ問いを見られる状態をつくります。</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-7 flex flex-col md:flex-row md:items-start gap-3 md:gap-6">
+                    <p class="md:w-2/5 text-lg md:text-xl font-bold text-brand-dark leading-snug shrink-0">
+                        <i class="fas fa-quote-left text-brand-gold/60 mr-2 text-base"></i>企画は通った。でも、誰がやるの？
+                    </p>
+                    <p class="md:w-3/5 text-base text-gray-600 leading-relaxed md:border-l md:border-gray-200 md:pl-6">役割・期限・判断ポイントを決め、企画を「実行できるプロジェクト」に変えます。</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center fade-in-section">
+                <p class="text-lg md:text-xl leading-relaxed text-brand-dark">
+                    違う問題に見えても、共通しているのは一つ。<br>
+                    まだ、思いや情報が<span class="bg-yellow-100 px-1 font-bold">「動ける形」になっていない</span>ことです。<br>
+                    <span class="font-bold text-brand-green">そこを整理して、動かすところまでが私の仕事です。</span>
                 </p>
             </div>
+        </div>
+    </section>
 
-            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 fade-in-section relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-2 bg-brand-gold"></div>
-                <ul class="space-y-6">
-                    <li class="flex items-start">
-                        <div class="flex-shrink-0 bg-red-100 rounded-full p-1 mt-1">
-                            <i class="fas fa-check text-red-500 text-xl w-6 h-6 flex items-center justify-center"></i>
-                        </div>
-                        <p class="ml-4 text-lg font-medium text-gray-700">
-                            新規事業で食品・菓子を作りたいが、<span class="bg-yellow-100 px-1">工場のツテも製造知識もない</span>。
-                        </p>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="flex-shrink-0 bg-red-100 rounded-full p-1 mt-1">
-                            <i class="fas fa-check text-red-500 text-xl w-6 h-6 flex items-center justify-center"></i>
-                        </div>
-                        <p class="ml-4 text-lg font-medium text-gray-700">
-                            社内の開発チームが、技術や製造の壁にぶつかり<span class="bg-yellow-100 px-1 font-bold">「できません」と諦めてしまう</span>。
-                        </p>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="flex-shrink-0 bg-red-100 rounded-full p-1 mt-1">
-                            <i class="fas fa-check text-red-500 text-xl w-6 h-6 flex items-center justify-center"></i>
-                        </div>
-                        <p class="ml-4 text-lg font-medium text-gray-700">
-                            企画、製造、営業の連携が取れず、プロジェクトが空中分解している。
-                        </p>
-                    </li>
-                    <li class="flex items-start">
-                        <div class="flex-shrink-0 bg-red-100 rounded-full p-1 mt-1">
-                            <i class="fas fa-check text-red-500 text-xl w-6 h-6 flex items-center justify-center"></i>
-                        </div>
-                        <p class="ml-4 text-lg font-medium text-gray-700">
-                            若手チームに主体性がなく、指示待ちの状態から抜け出せない。
-                        </p>
-                    </li>
-                </ul>
-                
-                <div class="mt-10 pt-10 border-t border-gray-100 text-center">
-                    <p class="text-xl md:text-2xl font-bold text-brand-dark">
-                        その停滞、<span class="text-brand-green">「技術・マーケ・現場」をつなぐ“翻訳者”</span>がいれば、<br>劇的に動き出します。
+
+    <!-- 3. 呼ばれたあと、何が変わったか -->
+    <section id="changes" class="py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-14 fade-in-section">
+                <span class="text-brand-green font-bold tracking-widest uppercase text-sm">What changed</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-4 text-gray-800">呼ばれたあと、何が変わったか</h2>
+                <p class="text-gray-600 text-lg">最初の依頼と、今の役割を並べています。</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 fade-in-section">
+                <div class="bg-white rounded-2xl shadow-lg p-7 md:p-9 border-t-4 border-brand-gold">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <span class="text-brand-green font-bold text-sm tracking-widest">01</span>
+                        <span class="text-base font-bold text-gray-500">食品メーカー｜継続支援中</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-4 leading-snug">会議の改善から、商品開発の型づくりへ</h3>
+                    <p class="text-gray-600 leading-relaxed mb-5">2025年1月から継続支援。最初の依頼は「商品開発会議を、決まる会議にしたい」。論点と決め方を整理していくうちに、会議のやり方を変えるだけでは届かないことが見えてきました。</p>
+                    <p class="bg-brand-goldLight/60 border-l-4 border-brand-gold px-5 py-4 text-base md:text-lg font-bold text-brand-dark leading-relaxed">
+                        <i class="fas fa-arrow-right text-brand-green mr-2"></i>依頼は「新しい商品開発の型をつくる」へ。現在はプロジェクトマネジメント、開発メンバーの壁打ちまで。
                     </p>
                 </div>
+                <div class="bg-white rounded-2xl shadow-lg p-7 md:p-9 border-t-4 border-brand-gold">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <span class="text-brand-green font-bold text-sm tracking-widest">02</span>
+                        <span class="text-base font-bold text-gray-500">製菓メーカー｜1年半</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-4 leading-snug">研修で教える側から、一緒に外へ出る側へ</h3>
+                    <p class="text-gray-600 leading-relaxed mb-5">開発メンバーの教育・研修として入りました。考え方と判断基準を渡していくうちに、役割が変わっていきます。</p>
+                    <p class="bg-brand-goldLight/60 border-l-4 border-brand-gold px-5 py-4 text-base md:text-lg font-bold text-brand-dark leading-relaxed">
+                        <i class="fas fa-arrow-right text-brand-green mr-2"></i>1年半の継続支援。コラボ案件の商談にも同席。
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-7 md:p-9 border-t-4 border-brand-gold">
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <span class="text-brand-green font-bold text-sm tracking-widest">03</span>
+                        <span class="text-base font-bold text-gray-500">子育て関連サービス</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-brand-dark mb-4 leading-snug">単発のモニター企画から、共創プロジェクトの設計へ</h3>
+                    <p class="text-gray-600 leading-relaxed mb-5">最初は一度きりのモニター調整でした。ユーザーと一緒につくる形に組み替えたところ、次期の話になりました。</p>
+                    <p class="bg-brand-goldLight/60 border-l-4 border-brand-gold px-5 py-4 text-base md:text-lg font-bold text-brand-dark leading-relaxed">
+                        <i class="fas fa-arrow-right text-brand-green mr-2"></i>プロジェクト化し、共創パートナーとして参画。
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center fade-in-section">
+                <p class="text-lg md:text-xl leading-relaxed text-brand-dark">
+                    3件に共通しているのは、<span class="font-bold">最初の依頼より、今の役割の方が広いこと。</span><br>
+                    <span class="font-bold text-brand-green">最初の依頼のまま終わった案件が、ひとつもありません。</span>
+                </p>
+                <p class="mt-6 text-sm text-gray-500">
+                    ※ 企業名は、各社の許諾手続きの都合により伏せています。ご相談の場でお伝えできる範囲はお答えします。
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- 3. Strengths (3つの理由) -->
-    <section id="strengths" class="py-24 bg-white relative">
-        <!-- Background Decor -->
-        <div class="absolute top-0 left-0 w-64 h-64 bg-brand-goldLight rounded-full blur-3xl opacity-50 -translate-x-1/2 -translate-y-1/2"></div>
 
+    <!-- 4. 選ばれる3つの理由 -->
+    <section id="strengths" class="py-24 bg-brand-gray relative">
         <div class="container mx-auto px-4 max-w-6xl relative z-10">
-            <div class="text-center mb-16 fade-in-section">
-                <span class="text-brand-gold font-bold tracking-widest uppercase text-base">Why me?</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-gray-800">
-                    私が選ばれる3つの理由
-                </h2>
+            <div class="text-center mb-14 fade-in-section">
+                <span class="text-brand-green font-bold tracking-widest uppercase text-sm">Reasons</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 text-gray-800">選ばれる3つの理由</h2>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                <!-- Reason 1 -->
-                <div class="relative bg-white rounded-xl p-8 md:pt-12 border border-gray-100 shadow-md hover:shadow-xl transition duration-300 fade-in-section">
-                    <div class="text-4xl md:text-6xl font-bold text-brand-gold/20 mb-4 md:mb-0 md:absolute md:top-4 md:right-6 text-left md:text-right">01</div>
-                    <div class="w-16 h-16 bg-brand-goldLight text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-gray-800">
-                        机上の空論ではない。<br>「国民的ヒット」を生み出した<br><span class="text-brand-green">確かな技術力</span>
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed text-base">
-                        ただのアイデア出しではありません。市場価値を生み出すコンセプト設計や、技術的なハードルを超えて実現させた「実務経験」が武器です。「作れない」を「どうやったら作れるか」に変換します。
-                    </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch fade-in-section">
+                <div class="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-brand-gold h-full">
+                    <div class="text-brand-gold font-bold text-3xl mb-3">1</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 leading-snug">人に残す</h3>
+                    <p class="text-gray-600 leading-relaxed text-base">私がいないと進まない状態をつくりません。考え方、判断基準、進め方を整理して、チーム自身が次から使える形にして残します。目指しているのは「また松岡を呼ばないと進まない」ではなく、<span class="font-bold text-brand-dark">「松岡とやったから、次は自分たちで進められる」</span>。そこまでが仕事だと考えています。</p>
                 </div>
-
-                <!-- Reason 2 -->
-                <div class="relative bg-white rounded-xl p-8 md:pt-12 border border-gray-100 shadow-md hover:shadow-xl transition duration-300 fade-in-section" style="transition-delay: 0.1s;">
-                    <div class="text-4xl md:text-6xl font-bold text-brand-gold/20 mb-4 md:mb-0 md:absolute md:top-4 md:right-6 text-left md:text-right">02</div>
-                    <div class="w-16 h-16 bg-brand-goldLight text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-gray-800">
-                        工場探しから量産まで。<br>ゼロイチの<span class="text-brand-green">「実装」にとことん強い</span>
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed text-base">
-                        多くのコンサルが苦手とする「製造現場（リアル）」にこそ強みがあります。委託先工場の探索、タフな交渉、ラインの条件設定まで。経営者の「作りたい」を、現場が「作れる」状態になるまで伴走します。
-                    </p>
+                <div class="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-brand-gold h-full">
+                    <div class="text-brand-gold font-bold text-3xl mb-3">2</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 leading-snug">つくったことがある人が、<br>現場まで行く</h3>
+                    <p class="text-gray-600 leading-relaxed text-base">企画書を書いて終わりではありません。食品メーカーで20年、商品を企画し、試作し、<span class="font-bold text-brand-dark">工場の量産ラインに乗せるところまで</span>やってきました。必要であれば製造現場に入り、試作・評価・関係者との調整まで一緒に進めます。</p>
                 </div>
-
-                <!-- Reason 3 -->
-                <div class="relative bg-white rounded-xl p-8 md:pt-12 border border-gray-100 shadow-md hover:shadow-xl transition duration-300 fade-in-section" style="transition-delay: 0.2s;">
-                    <div class="text-4xl md:text-6xl font-bold text-brand-gold/20 mb-4 md:mb-0 md:absolute md:top-4 md:right-6 text-left md:text-right">03</div>
-                    <div class="w-16 h-16 bg-brand-goldLight text-brand-gold rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4 text-gray-800">
-                        つくって終わりにしない。<br>予約13分で完売させた<br><span class="text-brand-green">ローンチ設計力</span>
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed text-base">
-                        世界観の設計から、SNSでの発信、初期販売の導線づくりまで一気通貫で伴走します。新規サブスク玩具サービスでは、予約開始13分で予定販売数が完売しました。「松岡に頼むと、チームが急に前に進み出す」と言われる巻き込み力は、この「売れる状態」をチームごとつくるために使っています。
-                    </p>
+                <div class="bg-white rounded-2xl shadow-lg p-8 border-t-4 border-brand-gold h-full">
+                    <div class="text-brand-gold font-bold text-3xl mb-3">3</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 leading-snug">問いから整理する</h3>
+                    <p class="text-gray-600 leading-relaxed text-base">いきなり答えを出しません。「本当に困っていることは何か」「なぜこれをやるのか」「誰に、どんな価値を届けたいのか」。まだ言葉になっていないところから整理して、企画として動ける形に変えていきます。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Works (実績ストーリー) -->
+
+    <!-- 5. 現在の企業支援実績 -->
+    <!-- Current Client Works -->
+    <section id="current-clients" class="py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12 fade-in-section">
+                <span class="text-brand-gold font-bold tracking-widest uppercase text-base">Current Client Works</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 text-gray-800">現在の企業支援実績</h2>
+                <p class="text-gray-600 mt-4 text-lg">独立後は、社外開発部長として多彩な企業の課題を並走で解決しています。</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="fade-in-section bg-brand-goldLight/40 border border-brand-gold/30 rounded-2xl p-6 md:p-8 shadow-sm">
+                    <p class="text-sm uppercase tracking-widest text-brand-green font-bold mb-1">Client 01</p>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">（株）グッデ様</h3>
+                    <p class="text-gray-700 font-medium mb-2">商品のリブランディングにおける味の監修・開発プロセス支援</p>
+                    <p class="text-gray-600 text-base leading-relaxed">味の方向性や世界観整理、委託先との開発フロー構築まで、ブランド再生を技術面から伴走しています。</p>
+                </div>
+
+                <div class="fade-in-section bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
+                    <p class="text-sm uppercase tracking-widest text-brand-green font-bold mb-1">Client 02</p>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">ピープル（株）様</h3>
+                    <p class="text-gray-700 font-medium mb-2">新規サブスク玩具サービス立ち上げ支援</p>
+                    <p class="text-gray-600 text-base leading-relaxed">サービスの世界観づくり・SNSでの盛り上げ施策の検討から、初期販売時の盛り上げ施策検討・実施まで伴走。予約開始13分で予定販売数が完売した実績が生まれました。ワクワクする顧客体験を共創中です。</p>
+                </div>
+
+                <div class="fade-in-section bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
+                    <p class="text-sm uppercase tracking-widest text-brand-green font-bold mb-1">Client 03</p>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">製菓製造技術アドバイザリー（複数社）</h3>
+                    <p class="text-gray-700 font-medium mb-2">原料・配合・製法に関する技術相談</p>
+                    <p class="text-gray-600 text-base leading-relaxed">製造の壁に直面する企業へ常時アドバイスを提供。原料選定から設備条件まで、現場目線での解決策を提示しています。</p>
+                </div>
+
+                <div class="fade-in-section bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
+                    <p class="text-sm uppercase tracking-widest text-brand-green font-bold mb-1">Client 04</p>
+                    <h3 class="text-2xl font-bold text-brand-dark mb-3">企業・個人向け 商品開発の個別相談</h3>
+                    <p class="text-gray-700 font-medium mb-2">コンセプト壁打ち、アイデア整理、実現可能性判断</p>
+                    <p class="text-gray-600 text-base leading-relaxed">「作りたい」を言語化し、優先順位やリスクまで可視化。小さな相談でもスピード感を持って次の一手をご提案しています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 会社員時代の実績（信用証明） -->
     <section id="works" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="text-center mb-16 fade-in-section">
@@ -369,46 +427,21 @@
         </div>
     </section>
 
-    <!-- Current Client Works -->
-    <section id="current-clients" class="py-24 bg-white">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="text-center mb-12 fade-in-section">
-                <span class="text-brand-gold font-bold tracking-widest uppercase text-base">Current Client Works</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-3 text-gray-800">現在の企業支援実績</h2>
-                <p class="text-gray-600 mt-4 text-lg">独立後は、社外開発部長として多彩な企業の課題を並走で解決しています。</p>
-            </div>
-
-            <div class="space-y-6">
-                <div class="fade-in-section bg-brand-goldLight/40 border border-brand-gold/30 rounded-2xl p-6 md:p-8 shadow-sm">
-                    <p class="text-sm uppercase tracking-widest text-brand-green font-bold mb-1">Client 01</p>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">（株）グッデ様</h3>
-                    <p class="text-gray-700 font-medium mb-2">商品のリブランディングにおける味の監修・開発プロセス支援</p>
-                    <p class="text-gray-600 text-base leading-relaxed">味の方向性や世界観整理、委託先との開発フロー構築まで、ブランド再生を技術面から伴走しています。</p>
-                </div>
-
-                <div class="fade-in-section bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
-                    <p class="text-sm uppercase tracking-widest text-brand-green font-bold mb-1">Client 02</p>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">ピープル（株）様</h3>
-                    <p class="text-gray-700 font-medium mb-2">新規サブスク玩具サービス立ち上げ支援</p>
-                    <p class="text-gray-600 text-base leading-relaxed">サービスの世界観づくり・SNSでの盛り上げ施策の検討から、初期販売時の盛り上げ施策検討・実施まで伴走。予約開始13分で予定販売数が完売した実績が生まれました。ワクワクする顧客体験を共創中です。</p>
-                </div>
-
-                <div class="fade-in-section bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
-                    <p class="text-sm uppercase tracking-widest text-brand-green font-bold mb-1">Client 03</p>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">製菓製造技術アドバイザリー（複数社）</h3>
-                    <p class="text-gray-700 font-medium mb-2">原料・配合・製法に関する技術相談</p>
-                    <p class="text-gray-600 text-base leading-relaxed">製造の壁に直面する企業へ常時アドバイスを提供。原料選定から設備条件まで、現場目線での解決策を提示しています。</p>
-                </div>
-
-                <div class="fade-in-section bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
-                    <p class="text-sm uppercase tracking-widest text-brand-green font-bold mb-1">Client 04</p>
-                    <h3 class="text-2xl font-bold text-brand-dark mb-3">企業・個人向け 商品開発の個別相談</h3>
-                    <p class="text-gray-700 font-medium mb-2">コンセプト壁打ち、アイデア整理、実現可能性判断</p>
-                    <p class="text-gray-600 text-base leading-relaxed">「作りたい」を言語化し、優先順位やリスクまで可視化。小さな相談でもスピード感を持って次の一手をご提案しています。</p>
-                </div>
+    <!-- 7. 向いていない依頼 -->
+    <section id="not-for" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl fade-in-section">
+            <div class="border border-gray-200 rounded-2xl p-8 md:p-10 bg-brand-gray">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5 text-brand-dark">向いていない依頼</h2>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
+                    答えと進め方がすでに決まっていて、その通りに手を動かす人をお探しの場合は、私より適任の方がいると思います。
+                </p>
+                <p class="text-base md:text-lg font-bold text-brand-dark leading-relaxed">
+                    私に向いているのは、<span class="text-brand-green">まだ答えが決まっていない仕事</span>です。
+                </p>
             </div>
         </div>
     </section>
+
 
     <!-- 5. Service / Menu -->
     <section id="service" class="py-24 bg-white">
@@ -510,6 +543,51 @@
         </div>
     </section>
 
+    <!-- 10. 紹介してくださる方へ -->
+    <section id="refer" class="py-24 bg-brand-goldLight/40">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-10 fade-in-section">
+                <span class="text-brand-green font-bold tracking-widest uppercase text-sm">For referrers</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 mb-5 text-gray-800">紹介してくださる方へ</h2>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                    お知り合いの会社で、<span class="font-bold">「まとまらない」「決まらない」<br class="md:hidden">「社内だけでは進まない」</span><br>
+                    そんな話が出ていたら。
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10 text-center mb-8 fade-in-section border-t-4 border-brand-gold">
+                <p class="text-xl md:text-3xl font-bold text-brand-dark leading-snug mb-4">
+                    「商品開発の松岡さん、<br class="md:hidden">紹介しようか？」
+                </p>
+                <p class="text-base text-gray-600">この一言だけ、覚えて帰ってください。</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg p-7 md:p-9 fade-in-section">
+                <h3 class="text-lg font-bold text-brand-dark mb-4">
+                    <i class="fas fa-paper-plane text-brand-green mr-2"></i>そのまま送れる紹介文
+                </h3>
+                <p id="refer-text" class="bg-brand-gray border border-gray-200 rounded-xl p-5 text-base text-gray-700 leading-relaxed whitespace-pre-line">商品開発や新規企画で、まだ整理されていない状態から一緒に形にしてくれる人がいます。
+お菓子メーカーで商品開発をしていた松岡さんという方で、企画だけでなく、実際に動くところまで入ってくれます。
+一度話してみますか？
+https://jyngly.com/</p>
+                <button id="refer-copy" type="button" class="mt-4 w-full md:w-auto bg-brand-green hover:bg-brand-greenHover text-white font-bold py-3 px-7 rounded-full shadow-md transition">
+                    <i class="fas fa-copy mr-2"></i><span id="refer-copy-label">この文をコピー</span>
+                </button>
+            </div>
+
+            <div class="mt-10 text-center fade-in-section">
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                    <span class="font-bold text-brand-dark">特につながりたい方</span><br>
+                    食品メーカー／原料メーカー／商社／機械ディーラーなど、<br class="hidden md:block">
+                    製造現場と日常的に接している方。<br><br>
+                    商品開発に限らず、<span class="font-bold">「この会社、何か変えたそうだな」</span>と感じる企業があれば、<br class="hidden md:block">
+                    まずは一度つないでください。
+                </p>
+            </div>
+        </div>
+    </section>
+
+
     <!-- 7. CTA / Contact -->
     <section id="contact" class="py-24 bg-white">
         <div class="container mx-auto px-4 max-w-4xl text-center fade-in-section">
@@ -564,11 +642,12 @@
             <div class="text-2xl font-bold mb-4 tracking-wide">
                 NAOnao<span class="text-brand-gold">.</span>
             </div>
-            <div class="flex justify-center space-x-6 mb-8 text-base">
-                <a href="#concept" class="hover:text-brand-gold transition">Concept</a>
-                <a href="#works" class="hover:text-brand-gold transition">Works</a>
-                <a href="#service" class="hover:text-brand-gold transition">Service</a>
-                <a href="#profile" class="hover:text-brand-gold transition">Profile</a>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 text-base">
+                <a href="#when" class="hover:text-brand-gold transition">こんな時に</a>
+                <a href="#changes" class="hover:text-brand-gold transition">事例</a>
+                <a href="#strengths" class="hover:text-brand-gold transition">3つの理由</a>
+                <a href="#current-clients" class="hover:text-brand-gold transition">実績</a>
+                <a href="#refer" class="hover:text-brand-gold transition">紹介</a>
             </div>
             <p class="text-gray-500 text-xs">
                 &copy; 2026 NAOnao Product Development. All Rights Reserved.
@@ -591,11 +670,28 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 menu.classList.add('hidden'); // Close mobile menu on click
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // 紹介文コピー
+        const referBtn = document.getElementById('refer-copy');
+        if (referBtn) {
+            referBtn.addEventListener('click', async () => {
+                const label = document.getElementById('refer-copy-label');
+                const text = document.getElementById('refer-text').innerText.trim();
+                try {
+                    await navigator.clipboard.writeText(text);
+                } catch (e) {
+                    const ta = document.createElement('textarea');
+                    ta.value = text; document.body.appendChild(ta); ta.select();
+                    document.execCommand('copy'); ta.remove();
+                }
+                label.textContent = 'コピーしました';
+                setTimeout(() => { label.textContent = 'この文をコピー'; }, 2000);
+            });
+        }
 
         // Fade-in Animation using Intersection Observer
         const observerOptions = {
